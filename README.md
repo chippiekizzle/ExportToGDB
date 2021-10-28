@@ -24,11 +24,17 @@ If this doesn’t work, you may need to manually export all .tif files to your g
 Jupyter Notebook code in ArcGIS Pro:
 
 import arcpy
+
 from arcpy import env
+
 env.workspace = "C:/Users/Chippie/Desktop/Lab10/Lab10"
+
 outputGDB = "C:/Users/Chippie/Desktop/Lab10/Lab10/Lab10.gdb/"
+
 aprx = arcpy.mp.ArcGISProject("current")
+
 arcpy.CheckExtension("SPATIAL")
+
 for m in aprx.listMaps():
     if m.name == "Map1":
         #try:
